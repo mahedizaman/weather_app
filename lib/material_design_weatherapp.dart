@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/header_content.dart';
 
 class WeatherAppMaterialPage extends StatefulWidget {
   const WeatherAppMaterialPage({super.key});
@@ -33,15 +34,18 @@ class _WeatherAppMaterialPageState extends State<WeatherAppMaterialPage> {
             ),
           ],
         ),
-        body: Column(
-          children: [
-            Placeholder(fallbackHeight: 220),
-            SizedBox(height: 16),
-            Placeholder(fallbackHeight: 180),
-            SizedBox(height: 16),
-            Placeholder(fallbackHeight: 180),
-            SizedBox(height: 16),
-          ],
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              SizedBox(width: double.infinity, child: HeaderContent()),
+              SizedBox(height: 20),
+              Placeholder(fallbackHeight: 180),
+              SizedBox(height: 20),
+              Placeholder(fallbackHeight: 180),
+              SizedBox(height: 20),
+            ],
+          ),
         ),
       ),
     );
