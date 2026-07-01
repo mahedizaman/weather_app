@@ -13,7 +13,7 @@ class WeatherApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        scaffoldBackgroundColor: Colors.black87,
+        scaffoldBackgroundColor: const Color.fromARGB(221, 136, 139, 198),
         appBarTheme: AppBarThemeData(
           backgroundColor: const Color.fromARGB(255, 36, 43, 35),
           foregroundColor: Colors.white,
