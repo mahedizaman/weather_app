@@ -13,14 +13,34 @@ class _LastContentPageState extends State<LastContentPage> {
     return SizedBox(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [AdditionalInfo(), AdditionalInfo(), AdditionalInfo()],
+        children: [
+          AdditionalInfo(
+            icon: (Icons.water_drop),
+            label: "Humidity",
+            value: "91",
+          ),
+          AdditionalInfo(icon: (Icons.air), label: "Wind speed", value: "185"),
+          AdditionalInfo(
+            icon: (Icons.wifi_protected_setup_sharp),
+            label: "Pressure",
+            value: "300",
+          ),
+        ],
       ),
     );
   }
 }
 
 class AdditionalInfo extends StatelessWidget {
-  const AdditionalInfo({super.key});
+  final IconData icon;
+  final String label;
+  final String value;
+  const AdditionalInfo({
+    super.key,
+    required this.value,
+    required this.icon,
+    required this.label,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +52,10 @@ class AdditionalInfo extends StatelessWidget {
 
         child: Column(
           children: [
-            Icon(Icons.water, color: Colors.white, size: 32),
+            Icon(icon, color: Colors.white, size: 32),
 
             Text(
-              "Humidity",
+              label,
 
               style: TextStyle(
                 fontSize: 16,
@@ -47,7 +67,7 @@ class AdditionalInfo extends StatelessWidget {
             ),
 
             Text(
-              "79",
+              value,
 
               style: TextStyle(
                 color: Colors.white,
