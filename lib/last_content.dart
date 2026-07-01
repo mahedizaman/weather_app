@@ -16,7 +16,6 @@ class _LastContentPageState extends State<LastContentPage> {
         children: [AdditionalInfo(), AdditionalInfo(), AdditionalInfo()],
       ),
     );
-    ;
   }
 }
 
@@ -25,7 +24,7 @@ class AdditionalInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
+    return Container(
       color: Colors.transparent,
 
       child: Padding(
@@ -39,7 +38,7 @@ class AdditionalInfo extends StatelessWidget {
               "Humidity",
 
               style: TextStyle(
-                fontSize: 18,
+                fontSize: 16,
 
                 fontWeight: FontWeight((500)),
 
@@ -48,12 +47,12 @@ class AdditionalInfo extends StatelessWidget {
             ),
 
             Text(
-              "7",
+              "79",
 
               style: TextStyle(
                 color: Colors.white,
 
-                fontSize: 16,
+                fontSize: 14,
 
                 fontWeight: FontWeight.bold,
               ),
