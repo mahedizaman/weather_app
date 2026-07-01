@@ -13,7 +13,7 @@ class _MiddleContentPageState extends State<MiddleContentPage> {
     return Card(
       color: Colors.amber,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(.circular(12)),
+        borderRadius: BorderRadius.all(.circular(14)),
       ),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
