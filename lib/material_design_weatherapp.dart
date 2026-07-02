@@ -16,7 +16,7 @@ class _WeatherAppMaterialPageState extends State<WeatherAppMaterialPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color.fromARGB(92, 9, 188, 27),
+          backgroundColor: const Color.fromARGB(30, 73, 109, 51),
           title: const Text("Weather App"),
           centerTitle: true,
           titleTextStyle: TextStyle(

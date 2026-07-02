@@ -13,7 +13,7 @@ class _HeaderContentState extends State<HeaderContent> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.amber,
+      color: const Color.fromARGB(255, 65, 72, 41),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(.circular(20)),
       ),

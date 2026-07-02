@@ -11,7 +11,7 @@ class _MiddleContentPageState extends State<MiddleContentPage> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Colors.amber,
+      color: const Color.fromARGB(255, 65, 72, 41),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(.circular(14)),
       ),
@@ -19,12 +19,20 @@ class _MiddleContentPageState extends State<MiddleContentPage> {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            Forecast(),
-            Forecast(),
-            Forecast(),
-            Forecast(),
-            Forecast(),
-            Forecast(),
+            Forecast(
+              time: "00.00",
+              icon: Icons.cloudy_snowing,
+              temp: "302.32K",
+            ),
+            Forecast(time: "03.00", icon: Icons.cloud_off, temp: "350.87K"),
+            Forecast(time: "06,00", icon: Icons.sunny_snowing, temp: "229K.33"),
+            Forecast(time: "09.00", icon: Icons.sunny, temp: "299.22K"),
+            Forecast(
+              time: "12.00",
+              icon: Icons.wind_power_rounded,
+              temp: "229.95K",
+            ),
+            Forecast(time: "15.00", icon: Icons.ac_unit_sharp, temp: "259.99K"),
           ],
         ),
       ),
@@ -33,33 +41,47 @@ class _MiddleContentPageState extends State<MiddleContentPage> {
 }
 
 class Forecast extends StatelessWidget {
-  const Forecast({super.key});
+  final String time;
+  final IconData icon;
+  final String temp;
+  const Forecast({
+    super.key,
+    required this.time,
+    required this.icon,
+    required this.temp,
+  });
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: 120,
       child: Container(
-        margin: EdgeInsets.all(8),
+        margin: EdgeInsets.all(4.0),
         child: Card(
-          color: const Color.fromARGB(255, 255, 210, 48),
+          color: const Color.fromARGB(255, 76, 89, 68),
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(12.0),
 
             child: Column(
               children: [
                 Text(
-                  "3.00",
+                  time,
                   style: TextStyle(
                     fontSize: 18,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight((700)),
                     color: Colors.white,
                   ),
                 ),
-                Icon(Icons.cloud, color: Colors.white, size: 32),
+                SizedBox(height: 4.0),
+                Icon(icon, color: Colors.white, size: 32),
+                SizedBox(height: 4.0),
                 Text(
-                  "301",
-                  style: TextStyle(color: Colors.white, fontSize: 16),
+                  temp,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 14,
+                    fontWeight: FontWeight(500),
+                  ),
                 ),
               ],
             ),
